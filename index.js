@@ -15,7 +15,7 @@ readline.question('Enter attr name : \n', name => {
     name = name.trim()
 
     data.forEach(element => {
-        let str = element.toString()
+        let str = JSON.stringify(element)
         writeFile(('outputs/'+(element[name].replace(/[^\w\s]/gi, '')).split(' ').join('_')+".js").toLowerCase(), str, (err) => {})
     });
 
