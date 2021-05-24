@@ -1,5 +1,4 @@
-const { readdirSync, rename, existsSync, mkdirSync, readdir, writeFile } = require('fs');
-const { resolve } = require('path');
+const { mkdirSync, writeFile } = require('fs');
 const readline = require('readline').createInterface({
   input: process.stdin,
   output: process.stdout
@@ -8,8 +7,6 @@ const readline = require('readline').createInterface({
 if (!existsSync('./outputs')){
     mkdirSync('./outputs');
 }
-
-const outDirPath = resolve(__dirname, 'outputs');
 
 const data = require('./data.json')
 
