@@ -1,4 +1,4 @@
-const { mkdirSync, writeFile } = require('fs');
+const { mkdirSync, existsSync, writeFile } = require('fs');
 const readline = require('readline').createInterface({
   input: process.stdin,
   output: process.stdout
